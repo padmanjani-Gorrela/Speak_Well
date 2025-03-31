@@ -1,0 +1,84 @@
+/* Base Styles */
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #846005;
+
+ 
+  }
+  
+  header {
+    background-color: #846005;
+    color: white;
+    padding: 20px;
+    text-align: center;
+   
+    
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin: 10px 0;
+  }
+  
+  .faq, .tutorials, .contact-support {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #846005;
+    border-radius: 5px;
+  }
+  
+  .feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #846005;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #846005;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #6b4e03;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }

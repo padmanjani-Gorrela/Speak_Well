@@ -1,0 +1,323 @@
+/* Resource Library Styles - Scoped with resource-lib- prefix to avoid conflicts */
+.resource-lib-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  margin-top: 170px;
+}
+
+/* Library Header */
+.resource-lib-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: none;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.resource-lib-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #846005;
+  
+}
+
+.resource-lib-header p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search */
+.resource-lib-search-container {
+  margin-bottom: 30px;
+}
+
+.resource-lib-search-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.resource-lib-search-input:focus {
+  outline: none;
+  border-color: #846005;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Layout */
+.resource-lib-content {
+  display: flex;
+  gap: 30px;
+}
+
+/* Filters Panel */
+.resource-lib-filters-panel {
+  flex: 0 0 250px;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  align-self: flex-start;
+  position: sticky;
+  top: 20px;
+}
+
+.resource-lib-filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.resource-lib-filters-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.resource-lib-reset-button {
+  background: none;
+  border: none;
+  color: #846005;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.resource-lib-filter-section {
+  margin-bottom: 20px;
+}
+
+.resource-lib-filter-section h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.resource-lib-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resource-lib-filter-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.resource-lib-filter-option input {
+  margin-right: 8px;
+}
+
+/* Resources Grid */
+.resource-lib-resources-grid {
+  flex: 1;
+}
+
+.resource-lib-results-info {
+  margin-bottom: 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.resource-lib-no-results {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+}
+
+.resource-lib-no-results h3 {
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+.resource-lib-resources-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Resource Card */
+.resource-lib-resource-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-lib-resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.resource-lib-resource-thumbnail {
+  position: relative;
+  height: 180px;
+}
+
+.resource-lib-resource-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resource-lib-resource-type-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color:rgb(132, 96, 5, 0.9);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+.resource-lib-icon {
+  display: inline-block;
+}
+
+.resource-lib-resource-details {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.resource-lib-resource-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #846005;
+}
+
+.resource-lib-resource-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.resource-lib-resource-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+}
+
+.resource-lib-resource-meta span {
+  background-color: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #4b5563;
+}
+
+.resource-lib-category {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+.resource-lib-skill-level {
+  background-color: #e0e7ff !important;
+  color: #4338ca !important;
+}
+
+.resource-lib-language {
+  background-color: #f3e8ff !important;
+  color: #7e22ce !important;
+}
+
+.resource-lib-duration,
+.resource-lib-read-time {
+  background-color: #ecfdf5 !important;
+  color: #047857 !important;
+}
+
+.resource-lib-resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.resource-lib-tag {
+  font-size: 0.75rem;
+  color: #6b7280;
+  background-color: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.resource-lib-resource-actions {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eaeaea;
+}
+
+.resource-lib-action-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.resource-lib-action-button.resource-lib-primary {
+  background-color: #846005;
+  color: white;
+}
+
+.resource-lib-action-button.resource-lib-primary:hover {
+  background-color: #846005;
+}
+
+.resource-lib-action-button.resource-lib-secondary {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.resource-lib-action-button.resource-lib-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resource-lib-content {
+    flex-direction: column;
+  }
+  
+  .resource-lib-filters-panel {
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .resource-lib-resources-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .resource-lib-resources-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-lib-header h1 {
+    font-size: 2rem;
+  }
+}

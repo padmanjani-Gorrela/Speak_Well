@@ -1,0 +1,338 @@
+:root {
+    --spt-primary-color: #846005;
+    --spt-text-color: rgb(0, 0, 0);
+    --spt-background-transparent: transparent;
+    --spt-border-color: rgba(132, 96, 5, 0.5);
+    --spt-hover-color: rgba(132, 96, 5, 0.8);
+    --spt-status-confirmed: #4CAF50;
+    --spt-status-pending: #FFC107;
+    --spt-card-background: rgba(132, 96, 5, 0.1);
+  }
+  
+  .spt-user-profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--spt-background-transparent);
+    color: var(--spt-text-color);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .spt-profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--spt-border-color);
+    position: relative;
+  }
+  
+  .spt-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--spt-primary-color);
+    color: var(--spt-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  .spt-profile-header-content {
+    flex-grow: 1;
+  }
+  
+  .spt-profile-header-content h1 {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    color: var(--spt-text-color);
+  }
+  
+  .spt-profile-status {
+    font-size: 16px;
+    color: var(--spt-text-color);
+    background-color: var(--spt-primary-color);
+    padding: 3px 12px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  .spt-edit-button, .spt-save-button, .spt-book-appointment-button, .spt-reschedule-button, .spt-cancel-button {
+    background-color: var(--spt-primary-color);
+    color: var(--spt-text-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .spt-edit-button:hover, .spt-save-button:hover, .spt-book-appointment-button:hover, .spt-reschedule-button:hover, .spt-cancel-button:hover {
+    background-color: var(--spt-hover-color);
+  }
+  
+  .spt-save-button {
+    margin-left: 10px;
+  }
+  
+  .spt-profile-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .spt-profile-section {
+    background: var(--spt-card-background);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--spt-border-color);
+  }
+  
+  .spt-profile-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--spt-primary-color);
+    font-size: 20px;
+    border-bottom: 1px solid var(--spt-border-color);
+    padding-bottom: 10px;
+  }
+  
+  .spt-info-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .spt-info-label {
+    font-weight: bold;
+    color: var(--spt-primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .spt-edit-input, .spt-edit-textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--spt-border-color);
+    border-radius: 4px;
+    padding: 8px;
+    color: var(--spt-text-color);
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .spt-edit-textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  .spt-edit-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .spt-appointments-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .spt-appointment-card {
+    background: var(--spt-card-background);
+    border: 1px solid var(--spt-border-color);
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .spt-appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .spt-appointment-therapist {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .spt-appointment-status {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+  }
+  
+  .spt-confirmed {
+    background-color: var(--spt-status-confirmed);
+    color: white;
+  }
+  
+  .spt-pending {
+    background-color: var(--spt-status-pending);
+    color: black;
+  }
+  
+  .spt-appointment-completed {
+    background-color: var(--spt-primary-color);
+    color: white;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+  
+  .spt-appointment-details {
+    display: flex;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .spt-appointment-date, .spt-appointment-time {
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .spt-detail-label {
+    font-weight: bold;
+    color: var(--spt-primary-color);
+  }
+  
+  .spt-appointment-notes {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--spt-border-color);
+  }
+  
+  .spt-appointment-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .spt-reschedule-button, .spt-cancel-button {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .spt-cancel-button {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+  
+  .spt-book-appointment-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  .spt-no-appointments {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .spt-user-profile-container {
+      background: var(--spt-background-transparent);
+    }
+    
+    .spt-profile-section {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .spt-appointment-card {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .spt-profile-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .spt-profile-section:nth-child(1),
+    .spt-profile-section:nth-child(2),
+    .spt-profile-section:nth-child(3) {
+      grid-column: span 1;
+    }
+    
+    .spt-profile-section:nth-child(4),
+    .spt-profile-section:nth-child(5) {
+      grid-column: span 2;
+    }
+    
+    .spt-info-item {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .spt-info-label {
+      min-width: 150px;
+      margin-bottom: 0;
+    }
+    
+    .spt-edit-input, .spt-edit-textarea {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .spt-profile-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .spt-profile-avatar {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .spt-edit-button, .spt-save-button {
+      margin-top: 15px;
+    }
+    
+    .spt-appointment-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .spt-appointment-status, .spt-appointment-completed {
+      margin-top: 8px;
+    }
+    
+    .spt-appointment-actions {
+      flex-direction: column;
+    }
+    
+    .spt-reschedule-button, .spt-cancel-button {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .spt-user-profile-container {
+      padding: 10px;
+    }
+    
+    .spt-profile-section {
+      padding: 15px;
+    }
+    
+    .spt-profile-avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 28px;
+    }
+    
+    .spt-profile-header-content h1 {
+      font-size: 24px;
+    }
+  }

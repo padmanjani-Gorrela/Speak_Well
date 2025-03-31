@@ -1,0 +1,375 @@
+/* SpeechTherapyPro.css - Scoped styles that won't affect external components */
+.speech-therapy-app {
+  --st-primary: #846005;
+  --st-white: #ffffff;
+  --st-light-primary: #a57b06;
+  --st-very-light-primary: #f5e6c0;
+  --st-gray: #f0f0f0;
+  --st-dark-gray: #333;
+}
+
+.speech-therapy-app {
+  background-color: transparent;
+  color: var(--st-dark-gray);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.speech-therapy-app main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.speech-therapy-app .hero {
+  background-color: var(--st-very-light-primary);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.speech-therapy-app .hero h1 {
+  color: var(--st-primary);
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.speech-therapy-app .hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.speech-therapy-app .btn {
+  background-color: var(--st-primary);
+  color: var(--st-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.speech-therapy-app .btn:hover {
+  background-color: var(--st-light-primary);
+}
+
+.speech-therapy-app h2 {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--st-primary);
+}
+
+.speech-therapy-app .exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.speech-therapy-app .exercise-card {
+  background-color: var(--st-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speech-therapy-app .exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.speech-therapy-app .card-image {
+  background-color: var(--st-very-light-primary);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speech-therapy-app .card-image span {
+  font-size: 3rem;
+}
+
+.speech-therapy-app .card-content {
+  padding: 1.5rem;
+}
+
+.speech-therapy-app .card-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--st-primary);
+}
+
+.speech-therapy-app .card-content p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--st-dark-gray);
+}
+
+.speech-therapy-app .difficulty {
+  display: flex;
+  margin: 0.5rem 0 1rem;
+}
+
+.speech-therapy-app .difficulty-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--st-gray);
+  margin-right: 5px;
+}
+
+.speech-therapy-app .difficulty-dot.active {
+  background-color: var(--st-primary);
+}
+
+/* Speech Recognition Section */
+.speech-therapy-app .speech-recognition-container {
+  background-color: var(--st-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.speech-therapy-app .speech-exercise {
+  margin-top: 1.5rem;
+}
+
+.speech-therapy-app .target-phrase {
+  background-color: var(--st-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.speech-therapy-app .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.speech-therapy-app .mic-btn {
+  background-color: var(--st-white);
+  border: 2px solid var(--st-primary);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.speech-therapy-app .mic-btn:hover {
+  background-color: var(--st-very-light-primary);
+}
+
+.speech-therapy-app .mic-btn.listening {
+  background-color: var(--st-primary);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(132, 96, 5, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(132, 96, 5, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(132, 96, 5, 0);
+  }
+}
+
+.speech-therapy-app .status-text {
+  font-size: 1rem;
+  color: var(--st-dark-gray);
+}
+
+.speech-therapy-app .result-container {
+  margin-top: 2rem;
+}
+
+.speech-therapy-app .result-container h3 {
+  margin-bottom: 0.5rem;
+  color: var(--st-primary);
+}
+
+.speech-therapy-app .result-box {
+  background-color: var(--st-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  min-height: 60px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.speech-therapy-app .feedback-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.speech-therapy-app .feedback-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speech-therapy-app .feedback-message {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--st-very-light-primary);
+}
+
+.speech-therapy-app .feedback-icon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Progress Section */
+.speech-therapy-app .progress-section {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: var(--st-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.speech-therapy-app .progress-chart {
+  margin-top: 1.5rem;
+}
+
+.speech-therapy-app .progress-chart h3 {
+  margin-bottom: 1.5rem;
+  color: var(--st-primary);
+}
+
+.speech-therapy-app .chart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 220px;
+  padding: 0 1rem;
+}
+
+.speech-therapy-app .chart-bar {
+  width: 18%;
+  background-color: var(--st-primary);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speech-therapy-app .chart-value {
+  position: absolute;
+  top: -25px;
+  color: var(--st-dark-gray);
+  font-weight: bold;
+}
+
+.speech-therapy-app .chart-label {
+  margin-top: 10px;
+  color: var(--st-dark-gray);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .speech-therapy-app .exercises-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .speech-therapy-app .exercises-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .speech-therapy-app .chart-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .speech-therapy-app .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .speech-therapy-app .hero p {
+    font-size: 1rem;
+  }
+  
+  .speech-therapy-app .exercises-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .speech-therapy-app .chart-bar {
+    width: 16%;
+  }
+  
+  .speech-therapy-app .chart-value {
+    font-size: 0.9rem;
+  }
+  
+  .speech-therapy-app .chart-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .speech-therapy-app .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .speech-therapy-app .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .speech-therapy-app .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .speech-therapy-app h2 {
+    font-size: 1.3rem;
+  }
+  
+  .speech-therapy-app .card-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .speech-therapy-app .target-phrase {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .speech-therapy-app .chart-container {
+    height: 180px;
+  }
+  
+  .speech-therapy-app .chart-value {
+    font-size: 0.8rem;
+    top: -20px;
+  }
+  
+  .speech-therapy-app .chart-label {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,452 @@
+/* TherapyReviews.css */
+
+.therapy-reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+   
+  }
+  
+  /* Header Styles */
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+    background: none;
+  }
+  
+  .reviews-header h1 {
+    font-size: 2.2rem;
+    color: #846005;
+    margin-bottom: 10px;
+  }
+  
+  .reviews-header p {
+    font-size: 1.1rem;
+    color: #718096;
+  }
+  
+  /* Reviews Content Layout */
+  .reviews-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  @media (min-width: 992px) {
+    .reviews-content {
+      grid-template-columns: 300px 1fr;
+      grid-template-areas:
+        "summary write-review"
+        "summary reviews-list";
+    }
+    
+    .reviews-summary {
+      grid-area: summary;
+    }
+    
+    .write-review {
+      grid-area: write-review;
+    }
+    
+    .reviews-list {
+      grid-area: reviews-list;
+    }
+  }
+  
+  /* Reviews Summary Styles */
+  .reviews-summary {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .average-rating {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .average-rating h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #846005;
+    margin: 0 0 5px 0;
+  }
+  
+  .average-rating p {
+    margin-top: 5px;
+    color: #718096;
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  .star {
+    color: #d1d5db;
+    font-size: 24px;
+    margin: 0 2px;
+  }
+  
+  .star.filled {
+    color: #f59e0b;
+  }
+  
+  .stars-container.interactive .star {
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .stars-container.interactive .star:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Rating Distribution */
+  .rating-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .rating-label {
+    flex: 0 0 60px;
+    text-align: right;
+    font-size: 0.9rem;
+  }
+  
+  .rating-count {
+    flex: 0 0 30px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .bar-container {
+    flex: 1;
+    height: 12px;
+    background-color: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    background-color: #f59e0b;
+    border-radius: 6px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Write Review Section */
+  .write-review {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+  }
+  
+  .write-review h2 {
+    color: #846005;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  @media (min-width: 576px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #846005;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .submit-button {
+    background-color: #846005;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #846005;
+  }
+  
+  .success-message {
+    background-color: #d1fae5;
+    color: #047857;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  /* Reviews List Section */
+  .reviews-list {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+  }
+  
+  .reviews-list h2 {
+    color: #846005;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .reviews-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .filter-control,
+  .sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .filter-control label,
+  .sort-control label {
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .filter-control select,
+  .sort-control select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .filter-control select:focus,
+  .sort-control select:focus {
+    border-color: #846005;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  }
+  
+  /* Review Cards */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+  
+  .review-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #846005;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .reviewer-details h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2d3748;
+  }
+  
+  .review-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .verified-badge {
+    background-color: #e6fffa;
+    color: #059669;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .review-date {
+    color: #718096;
+    font-size: 0.9rem;
+  }
+  
+  .review-body {
+    margin-bottom: 15px;
+  }
+  
+  .review-body h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #2d3748;
+  }
+  
+  .therapist-name {
+    font-size: 0.95rem;
+    color: #4a5568;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .review-content {
+    color: #4a5568;
+    line-height: 1.6;
+  }
+  
+  .review-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .helpful-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    color: #4a5568;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .helpful-button:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .helpful-icon {
+    font-size: 1rem;
+  }
+  
+  .no-reviews {
+    text-align: center;
+    padding: 30px 0;
+    color: #718096;
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 576px) {
+    .review-header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .reviews-controls {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .therapy-reviews-container {
+      padding: 15px;
+    }
+    
+    .reviews-summary,
+    .write-review,
+    .reviews-list {
+      padding: 15px;
+    }
+  }
