@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import './Home.css'
 import FeaturedTherapyServices from './FeaturedTherapyServices';
 import CallToAction from './CallToAction';
-import Footer from './footer';
+import Footer from "./Footer";
+
 import Navbar1 from '../navbar/Navbar1';
 
 
